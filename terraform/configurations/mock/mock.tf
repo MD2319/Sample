@@ -4,7 +4,7 @@ environment="dev1"
 //hostname="cif.cluster.k8s.local"
 
 
-appname="RFIDreadEvents"
+appname="Sample"
 appversion="0.1"
 project="apigee"
 region="us-west-2"
