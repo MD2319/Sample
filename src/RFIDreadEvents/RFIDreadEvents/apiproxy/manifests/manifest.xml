@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Manifest name="manifest">
+    <Policies>
+        <VersionInfo resourceName="ErrorHandling-AccessToken" version="SHA-512:4b9c4b5bfec2634d64a6a11a9bc5f26f79474333cc13ae114c0d557b32a5951292d601e3608bfee2d53ce3a2fdb010b78bb331738c27dc946a47cff15b2cabae"/>
+        <VersionInfo resourceName="ExtractErrorResponse" version="SHA-512:fbc2b17e6be7557ce7cbae87c128490c922a8a3150583a0ab7e2f588d707205c8caa1f8aeb0a1bce041f4486edb0327b786fcd30569ed9bd7ce16348231462b3"/>
+        <VersionInfo resourceName="RF-Hook-ID-not-found" version="SHA-512:f1c5822fbb448115c8482c614d1c5afa2f3362b8f03d5f747f3cc77180e83668decdf44d91b21aa4542a6a1e313f39d683e9d831afe17049281d1fb4ba587ed8"/>
+        <VersionInfo resourceName="Remove-access-token-authorization" version="SHA-512:52747bcea83de291caf599c6674f00c3700f87c2eaf7bb3610514a0b71dbea5f7721780e51647c0ad2077ff2fd3463a35b7f7de58f184adb097609a1a7c83eac"/>
+        <VersionInfo resourceName="Set-request-headers" version="SHA-512:d13be5948ee1aca96d89c647bb0e810492ba190e44c269e069b1a027442187016ba8335dbc03785f403c78fc4ed25db6d8110e860d6df94379232c2aea32bd81"/>
+        <VersionInfo resourceName="Verify-Access-Token" version="SHA-512:42b148dcaf6379b8303c3625ff8ef64ed6cdf5ffed4e8d81941dbeb26f6133bea197bb347c40eeb91080d1c8b496a03646670feaeb3649c15f91e7f09e60788e"/>
+        <VersionInfo resourceName="add-cors" version="SHA-512:08cc2ef69b08ee73467f7be74960047faa490fcc61ebba744cc1436358ed8068b052ee8c6e101ad00a5d54633c92d8195f7ed624372a59614265f0e515a1b5a1"/>
+        <VersionInfo resourceName="set-error-response" version="SHA-512:5fccc53017ebb7bc562a22905505ea0118b9b97f5e1cd38a2b51de42d919c89244c855d336fc1f6104f677ef9447061f5ae7acf49a2578c5212b741d0d80c7e9"/>
+    </Policies>
+    <ProxyEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:144c5f2d85a3d6865c62e5f1d93139126a3e58ec63cc03b03b970e7bca1736c3897495f613fcdf560acc66b96273f3ec7236ac7cdbba28a109c9e7f932e4cad9"/>
+    </ProxyEndpoints>
+    <Resources>
+        <VersionInfo resourceName="openapi://association.json" version="SHA-512:59526c0d4afbdb618f1f74b1363339ccb49d9b3dbc776bb77569bebf28ed56a58433aa0187556bfd0a9f3f6945e8b61ffc43cc5550eda3787d15660323baf89e"/>
+    </Resources>
+    <SharedFlows/>
+    <TargetEndpoints>
+        <VersionInfo resourceName="default" version="SHA-512:4132967d6cab8d4d544bfdb2bc4285935c186c7e203d6b51680900cb47647d10f9f2dc7f0b62d27c42b50680342bb389edeb5a959ce445c01ee2f20b96493c2a"/>
+    </TargetEndpoints>
+</Manifest>

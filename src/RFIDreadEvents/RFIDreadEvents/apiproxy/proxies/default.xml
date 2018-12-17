@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ProxyEndpoint name="default">
+    <Description/>
+    <FaultRules>
+        <FaultRule name="Error-handling-accesstoken">
+            <Step>
+                <Name>ErrorHandling-AccessToken</Name>
+            </Step>
+        </FaultRule>
+    </FaultRules>
+    <PreFlow name="PreFlow">
+        <Request>
+            <Step>
+                <Name>Verify-Access-Token</Name>
+            </Step>
+            <Step>
+                <Name>Remove-access-token-authorization</Name>
+            </Step>
+            <Step>
+                <Name>Set-request-headers</Name>
+            </Step>
+        </Request>
+        <Response/>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request/>
+        <Response/>
+    </PostFlow>
+    <Flows>
+        <Flow name="get /hooks">
+            <Description>Gets a list of subscriptions that match the search criteria</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/hooks") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="post /hooks">
+            <Description>Creates an RFID read subscription</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/hooks") and (request.verb = "POST")</Condition>
+        </Flow>
+        <Flow name="get /hooks/{id}/">
+            <Description>Gets an RFID read subscription</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/hooks/*/") and (request.verb = "GET")</Condition>
+        </Flow>
+        <Flow name="put /hooks/{id}/">
+            <Description>Changes an RFID read subscription</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/hooks/*/") and (request.verb = "PUT")</Condition>
+        </Flow>
+        <Flow name="delete /hooks/{id}/">
+            <Description>Remove an RFID read subscription</Description>
+            <Request/>
+            <Response/>
+            <Condition>(proxy.pathsuffix MatchesPath "/hooks/*/") and (request.verb = "DELETE")</Condition>
+        </Flow>
+    </Flows>
+    <HTTPProxyConnection>
+        <BasePath>/v1/read</BasePath>
+            <VirtualHost>default</VirtualHost>
+            <VirtualHost>secure</VirtualHost>
+  
+    </HTTPProxyConnection>
+ 
+    <RouteRule name="default">
+        <TargetEndpoint>default</TargetEndpoint>
+    </RouteRule>
+</ProxyEndpoint>

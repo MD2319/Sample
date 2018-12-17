@@ -1,0 +1,122 @@
+{
+	"info": {
+		"_postman_id": "904ef15d-7318-442c-8d8e-820fc2f3cc6b",
+		"name": "Mule-Devops-App-Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Health Check",
+			"description": null,
+			"item": [
+				{
+					"name": "Ping the API",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2a2ffd55-48cd-47e6-8044-ae385ca79fbd",
+								"type": "text/javascript",
+								"exec": [
+									"pm.test('Response Status Check', function () {",
+									"\tpm.response.to.have.status(200);",
+									"\tpm.expect(pm.response.responseTime).to.be.below(800);",
+									"})",
+									"",
+									"pm.test(\"Body matches string\", function () {",
+									"    pm.expect(pm.response.text()).to.include(\"Application is up and running\");",
+									"});",
+									"",
+									"pm.test(\"Response time is less than 200ms\", function () {",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);",
+									"});",
+									"",
+									"pm.test(\"Content-Type is present\", function () {",
+									"    pm.response.to.have.header(\"Content-Type\");",
+									"});"
+								]
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "945042dc-1d26-4f1d-8505-61d928416bac",
+								"type": "text/javascript",
+								"exec": [
+									""
+								]
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://vrnvikas1994-eval-test.apigee.net/heartbeat",
+							"protocol": "http",
+							"host": [
+								"ec2-54-202-173-210",
+								"us-west-2",
+								"compute",
+								"amazonaws.com"
+							],
+							"port": "8093",
+							"path": [
+								"heartbeat"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "c97e3fac-9e1a-4a2d-89a1-316db4226b72",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "ac6e78e9-3fe3-49ee-b369-b4bfb17bbe77",
+						"type": "text/javascript",
+						"exec": [
+							"pm.test(\"Status code is 200\", () => pm.response.to.have.status(200))"
+						]
+					}
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "dc3d0ab5-1b11-4abe-b203-7240dc6b3fd7",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "3dfdde3a-f257-4fde-8b54-9301f0e4f6c8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

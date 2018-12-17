@@ -1,0 +1,10 @@
+jmeter:
+ - name: heart_beat
+   path: Testdata
+   version:
+postman:
+ - name: Mule-Devops-App-Collection.postman_collection
+   path: Testdata
+   style: reports/templates/customTemplate_1.hbs
+   env: environments/Restful_Booker_Environment.json
+   version:

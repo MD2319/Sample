@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<TargetEndpoint name="default">
+    <Description/>
+    <FaultRules>
+        <FaultRule name="Error-handling-accesstoken">
+            <Step>
+                <Name>ErrorHandling-AccessToken</Name>
+            </Step>
+        </FaultRule>
+    </FaultRules>
+    <PreFlow name="PreFlow">
+        <Request/>
+        <Response>
+            <Step>
+                <Name>add-cors</Name>
+            </Step>
+        </Response>
+    </PreFlow>
+    <PostFlow name="PostFlow">
+        <Request>
+        </Request>
+        <Response>
+            <Step>
+                <Name>ExtractErrorResponse</Name>
+            </Step>
+            <Step>
+                <Name>RF-Hook-ID-not-found</Name>
+            </Step>
+        </Response>
+    </PostFlow>
+    <Flows/>
+    <HTTPTargetConnection>
+        <Properties/>
+        <LoadBalancer>
+            <Algorithm>RoundRobin</Algorithm>
+            <Server name="Triggers"/>
+        </LoadBalancer>
+        <Path>/read</Path>
+    </HTTPTargetConnection>
+</TargetEndpoint>

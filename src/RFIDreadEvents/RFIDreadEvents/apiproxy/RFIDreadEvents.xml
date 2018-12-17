@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<APIProxy revision="1" name="RFIDreadEvents">
+    <Basepaths>/v1/readevents</Basepaths>
+    <ConfigurationVersion majorVersion="4" minorVersion="0"/>
+    <CreatedAt>1544528729611</CreatedAt>
+    <CreatedBy>defaultUser</CreatedBy>
+    <Description>Manage RFID read event subscriptions</Description>
+    <DisplayName>ReadEvents</DisplayName>
+    <LastModifiedAt>1544528729611</LastModifiedAt>
+    <LastModifiedBy>defaultUser</LastModifiedBy>
+    <ManifestVersion>SHA-512:01e76f414641ea473f9bc4f861b288308b13fa84e8ff61f840d51da359522e1ac08f3dae74f87cc0ebceca7ad99ceadd6873bd330051844392fc2a001a9ad212</ManifestVersion>
+    <Policies>
+        <Policy>ErrorHandling-AccessToken</Policy>
+        <Policy>ExtractErrorResponse</Policy>
+        <Policy>RF-Hook-ID-not-found</Policy>
+        <Policy>Remove-access-token-authorization</Policy>
+        <Policy>Set-request-headers</Policy>
+        <Policy>Verify-Access-Token</Policy>
+        <Policy>add-cors</Policy>
+        <Policy>set-error-response</Policy>
+    </Policies>
+    <ProxyEndpoints>
+        <ProxyEndpoint>default</ProxyEndpoint>
+    </ProxyEndpoints>
+    <Resources>
+        <Resource>openapi://association.json</Resource>
+    </Resources>
+    <Spec></Spec>
+    <TargetServers/>
+    <TargetEndpoints>
+        <TargetEndpoint>default</TargetEndpoint>
+    </TargetEndpoints>
+</APIProxy>

@@ -1,0 +1,23 @@
+---
+version: 0.1
+docker: []
+lambda: []
+apigee:
+ - name: RFIDreadEvents
+   lang: xml
+   pom_dir: src/RFIDreadEvents
+ - name: Printers-Preview
+   lang: xml
+   pom_dir: src/Printers-Preview
+deployment:
+  terraform_path: terraform
+  artifact_server_url: localhost:1234
+jmeter_path: tests/jmeter
+postman_newman_path: tests/postman
+smoke_test:
+  - url: vrnvikas1994-eval-test.apigee.net/heartbeat
+    env: test
+    status: 200
+  - url: vrnvikas1994-eval-test.apigee.net/heartbeat
+    env: test
+    status: 200
