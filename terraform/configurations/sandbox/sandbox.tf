@@ -4,7 +4,7 @@ environment="dev1"
 //hostname="cif.cluster.k8s.local"
 
 
-appname="Sample"
+appname="sample"
 appversion="0.1"
 project="apigee"
 region="us-west-2"
