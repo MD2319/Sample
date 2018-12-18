@@ -5,10 +5,10 @@ lambda: []
 apigee:
  - name: RFIDreadEvents
    lang: xml
-   pom_dir: src/SampleApiProxy/RFIDreadEvents
+   pom_dir: src/RFIDreadEvents/SampleApiProxy
  - name: Printers-Preview
    lang: xml
-   pom_dir: src/SampleApiProxy/Printers-Preview
+   pom_dir: src/Printers-Preview/SampleApiProxy
 deployment:
   terraform_path: terraform
   artifact_server_url: localhost:1234
