@@ -59,7 +59,7 @@
         </Flow>
     </Flows>
     <HTTPProxyConnection>
-        <BasePath>/v1/read</BasePath>
+        <BasePath>/v1/test/read</BasePath>
             <VirtualHost>default</VirtualHost>
             <VirtualHost>secure</VirtualHost>
   
